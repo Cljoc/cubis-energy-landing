@@ -21,7 +21,7 @@ export default function Security() {
             داده‌های تولید شما، فقط مال شماست
           </h2>
           <p className="mt-5 max-w-lg leading-8 text-mist">
-            CUBIS با معماری <span className="text-white">On-Premise</span> طراحی شده تا
+            پلتفرم مدیریت هوشمند انرژی با معماری <span className="text-white">On-Premise</span> طراحی شده تا
             حساس‌ترین داده‌های عملیاتی کارخانه‌ی شما، هرگز از مرزهای شبکه‌ی داخلی سازمان
             خارج نشود؛ همراه با تمام امکانات یک پلتفرم مدرن ابری.
           </p>
@@ -49,7 +49,7 @@ export default function Security() {
             <ArchLine />
             <ArchRow icon="server" title="سرور داخلی سازمان" desc="پردازش، ذخیره‌سازی و تحلیل کاملاً درون‌سازمانی" />
             <ArchLine />
-            <ArchRow icon="chart" title="داشبورد CUBIS" desc="نمایش، هشدار و گزارش‌گیری برای تیم شما" />
+            <ArchRow icon="chart" title="داشبورد رهنمون" desc="نمایش، هشدار و گزارش‌گیری برای تیم شما" />
           </div>
         </div>
       </div>

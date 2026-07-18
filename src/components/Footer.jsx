@@ -27,11 +27,11 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2.5">
-              <Logo className="h-9 w-9 rounded-xl" />
-              <span className="text-sm font-extrabold text-white">CUBIS by Rahnamoon</span>
+              <Logo className="h-9 w-9" />
+              <span className="text-sm font-extrabold text-white">رهنمون | پلتفرم مدیریت هوشمند انرژی</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-mist">
-              پلتفرم هوشمند مدیریت انرژی صنعتی، برای پایش، تحلیل و بهینه‌سازی مصرف — امن و کاملاً On-Premise.
+              پلتفرم مدیریت هوشمند انرژی صنعتی، برای پایش، تحلیل و بهینه‌سازی مصرف — امن و کاملاً On-Premise.
             </p>
           </div>
 

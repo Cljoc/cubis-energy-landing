@@ -27,9 +27,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-mist">
-            CUBIS پایش لحظه‌ای، تحلیل کلان‌داده و مدیریت هوشمند مصرف انرژی را برای صنایع
-            انرژی‌بر فراهم می‌کند؛ کاملاً <span className="text-white">On-Premise</span> و
-            امن، بدون نگرانی از خروج داده‌های حساس تولید از سازمان شما.
+            پلتفرم مدیریت هوشمند انرژی رهنمون، پایش لحظه‌ای، تحلیل کلان‌داده و مدیریت هوشمند
+            مصرف انرژی را برای صنایع انرژی‌بر فراهم می‌کند؛ کاملاً{' '}
+            <span className="text-white">On-Premise</span> و امن، بدون نگرانی از خروج
+            داده‌های حساس تولید از سازمان شما.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -83,7 +84,7 @@ function DashboardPreview() {
           <span className="mr-3 truncate text-[11px] text-mist">app.rahnamoon.ir/dashboard</span>
         </div>
         <div className="bg-paper">
-          <img src={dashboardMain} alt="داشبورد CUBIS" className="block w-full" />
+          <img src={dashboardMain} alt="داشبورد پلتفرم مدیریت هوشمند انرژی" className="block w-full" />
         </div>
       </div>
 

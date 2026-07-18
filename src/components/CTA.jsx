@@ -21,11 +21,11 @@ export default function CTA() {
         <div>
           <span className="kicker text-teal-2">شروع کنید</span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-            برای دموی رایگان CUBIS با ما در تماس باشید
+            برای دموی رایگان پلتفرم مدیریت هوشمند انرژی با ما در تماس باشید
           </h2>
           <p className="mt-5 max-w-md leading-8 text-mist">
             کارشناسان رهنمون ظرف کمتر از یک روز کاری با شما تماس می‌گیرند و مسیر استقرار
-            CUBIS متناسب با زیرساخت کارخانه‌ی شما را بررسی می‌کنند.
+            پلتفرم را متناسب با زیرساخت کارخانه‌ی شما بررسی می‌کنند.
           </p>
 
           <div className="mt-8 space-y-3 text-sm text-mist">

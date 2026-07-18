@@ -19,12 +19,12 @@ export default function DashboardShowcase() {
     <section id="dashboard" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="kicker justify-center text-teal-2">داشبورد CUBIS</span>
+          <span className="kicker justify-center text-teal-2">داشبورد رهنمون</span>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl text-balance">
             محصولی که واقعاً روی خط تولید کار می‌کند
           </h2>
           <p className="mt-4 text-mist">
-            تصاویر واقعی از پلتفرم CUBIS — همان چیزی که تیم تولید و انرژی هر روز با آن کار می‌کند.
+            تصاویر واقعی از پلتفرم مدیریت هوشمند انرژی — همان چیزی که تیم تولید و انرژی هر روز با آن کار می‌کند.
           </p>
         </div>
 
