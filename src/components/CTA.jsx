@@ -19,7 +19,7 @@ export default function CTA() {
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
         <div>
-          <span className="text-sm font-bold text-teal-2">شروع کنید</span>
+          <span className="kicker text-teal-2">شروع کنید</span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
             برای دموی رایگان CUBIS با ما در تماس باشید
           </h2>

@@ -1,4 +1,5 @@
 import { Icon } from './icons'
+import dashboardMain from '../assets/screens/dashboard-main.png'
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
             پلتفرم بومی مدیریت انرژی صنعتی
           </div>
 
-          <h1 className="mt-6 text-4xl font-black leading-[1.25] text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.2]">
+          <h1 className="text-balance mt-6 font-black leading-[1.15] text-white text-[clamp(2.25rem,5vw,3.75rem)]">
             هر آنچه از انرژی کارخانه‌تان
             <br />
             باید بدانید، در <span className="text-teal-2">یک داشبورد</span>
@@ -34,7 +35,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 font-bold text-navy shadow-[0_0_0_0_rgba(20,184,166,0)] transition hover:bg-teal-2 hover:shadow-[0_0_40px_-8px_rgba(45,212,191,0.6)]"
+              className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 font-bold text-navy shadow-[0_0_0_0_rgba(234,168,13,0)] transition hover:bg-teal-2 hover:shadow-[0_0_40px_-8px_rgba(255,207,86,0.6)]"
             >
               درخواست دمو رایگان
               <Icon name="arrow" className="h-4 w-4 -rotate-180 transition group-hover:-translate-x-1" />
@@ -55,7 +56,7 @@ export default function Hero() {
         </div>
 
         <div className="relative rise" style={{ animationDelay: '120ms' }}>
-          <DashboardMock />
+          <DashboardPreview />
         </div>
       </div>
     </section>
@@ -71,28 +72,22 @@ function Stat({ value, label }) {
   )
 }
 
-function DashboardMock() {
+function DashboardPreview() {
   return (
-    <div className="relative mx-auto max-w-md">
-      <div className="glass float relative rounded-3xl p-5 shadow-2xl shadow-black/40">
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-bold text-white">مصرف انرژی زنده</span>
-          <span className="rounded-full bg-teal/15 px-2.5 py-1 text-[11px] font-semibold text-teal-2">Live</span>
+    <div className="relative mx-auto max-w-lg">
+      <div className="float overflow-hidden rounded-2xl border border-white/10 bg-navy-2 shadow-2xl shadow-black/50">
+        <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-4 py-3">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber/70" />
+          <span className="h-2.5 w-2.5 rounded-full bg-teal-2/70" />
+          <span className="mr-3 truncate text-[11px] text-mist">app.rahnamoon.ir/dashboard</span>
         </div>
-
-        <div className="mt-5 flex items-end gap-2 h-28">
-          {[40, 65, 50, 80, 60, 95, 70, 55, 88, 66].map((h, i) => (
-            <div key={i} className="flex-1 rounded-t-md bg-gradient-to-t from-teal/70 to-teal-2" style={{ height: `${h}%` }} />
-          ))}
-        </div>
-
-        <div className="mt-6 grid grid-cols-2 gap-4">
-          <MiniCard label="مصرف بر تن" value="۱۵۸.۷" unit="kWh/ton" trend="-8.7%" good />
-          <MiniCard label="بازده انرژی" value="۹۲.۴" unit="%" trend="+4.8%" good />
+        <div className="bg-paper">
+          <img src={dashboardMain} alt="داشبورد CUBIS" className="block w-full" />
         </div>
       </div>
 
-      <div className="glass float-slow absolute -bottom-8 -right-8 w-52 rounded-2xl p-4 shadow-xl shadow-black/40">
+      <div className="glass float-slow absolute -bottom-8 -right-6 w-52 rounded-2xl p-4 shadow-xl shadow-black/40">
         <div className="flex items-center gap-2 text-xs font-semibold text-amber">
           <span className="grid h-6 w-6 place-items-center rounded-full bg-amber/15">!</span>
           هشدار انحراف مصرف
@@ -100,26 +95,13 @@ function DashboardMock() {
         <p className="mt-2 text-[11px] leading-5 text-mist">خط تولید ۳ — مصرف ۱۸٪ بالاتر از میانگین هفتگی</p>
       </div>
 
-      <div className="glass float absolute -top-8 -left-10 rounded-2xl px-4 py-3 shadow-xl shadow-black/40" style={{ animationDelay: '1.4s' }}>
+      <div className="glass float absolute -top-6 -left-8 rounded-2xl px-4 py-3 shadow-xl shadow-black/40" style={{ animationDelay: '1.4s' }}>
         <div className="text-[11px] text-mist">On-Premise</div>
         <div className="mt-1 flex items-center gap-1.5 text-xs font-bold text-white">
           <span className="h-2 w-2 rounded-full bg-teal-2" />
           امن روی زیرساخت شما
         </div>
       </div>
-    </div>
-  )
-}
-
-function MiniCard({ label, value, unit, trend, good }) {
-  return (
-    <div className="rounded-xl bg-white/5 p-3">
-      <div className="text-[11px] text-mist">{label}</div>
-      <div className="mt-1 flex items-baseline gap-1">
-        <span className="num-en text-lg font-extrabold text-white">{value}</span>
-        <span className="text-[10px] text-mist">{unit}</span>
-      </div>
-      <div className={`num-en mt-1 text-[11px] font-bold ${good ? 'text-teal-2' : 'text-amber'}`}>{trend}</div>
     </div>
   )
 }

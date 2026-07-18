@@ -1,3 +1,5 @@
+import Logo from './Logo'
+
 const cols = [
   {
     title: 'محصول',
@@ -25,9 +27,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-teal to-teal-2 text-navy font-black text-lg">
-                R
-              </span>
+              <Logo className="h-9 w-9 rounded-xl" />
               <span className="text-sm font-extrabold text-white">CUBIS by Rahnamoon</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-mist">

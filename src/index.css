@@ -2,14 +2,17 @@
 
 @theme {
   --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0b1220;
-  --color-navy: #0e1a2b;
-  --color-navy-2: #142236;
-  --color-teal: #14b8a6;
-  --color-teal-2: #2dd4bf;
-  --color-amber: #f5b23e;
-  --color-mist: #94a3b8;
+  --color-ink: #0b0d12;
+  --color-navy: #101216;
+  --color-navy-2: #17191f;
+  --color-teal: #eaa80d;
+  --color-teal-2: #ffcf56;
+  --color-amber: #fb7a3c;
+  --color-mist: #9aa1ae;
+  --color-paper: #f4f5f7;
+  --color-paper-2: #e8eaee;
 }
 
 html {
@@ -26,11 +29,33 @@ body {
 
 ::selection {
   background: var(--color-teal);
-  color: #04241f;
+  color: #241a02;
 }
 
 .num-en {
   font-variant-numeric: tabular-nums;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 .grain::before {

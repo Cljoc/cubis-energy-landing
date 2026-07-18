@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Logo from './Logo'
 
 const links = [
   { href: '#features', label: 'ویژگی‌ها' },
@@ -27,9 +28,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-teal to-teal-2 text-navy font-black text-lg">
-            R
-          </span>
+          <Logo className="h-9 w-9 rounded-xl" />
           <span className="flex flex-col leading-none">
             <span className="text-sm font-extrabold tracking-wide text-white">CUBIS</span>
             <span className="text-[11px] text-mist">by Rahnamoon</span>

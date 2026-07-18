@@ -16,7 +16,7 @@ export default function Features() {
     <section id="features" className="py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-bold text-teal-2">ویژگی‌ها</span>
+          <span className="kicker text-teal-2">ویژگی‌ها</span>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
             یک پلتفرم، برای کل چرخه‌ی مدیریت انرژی
           </h2>

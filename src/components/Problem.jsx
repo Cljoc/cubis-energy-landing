@@ -18,7 +18,7 @@ export default function Problem() {
     <section className="relative border-y border-white/5 bg-navy-2/40 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
-          <span className="text-sm font-bold text-teal-2">چالش صنایع انرژی‌بر</span>
+          <span className="kicker text-teal-2">چالش صنایع انرژی‌بر</span>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
             مدیریت انرژی بدون دید لحظه‌ای، یعنی هدررفت پنهان سرمایه
           </h2>

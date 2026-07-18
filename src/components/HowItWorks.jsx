@@ -10,7 +10,7 @@ export default function HowItWorks() {
     <section id="how" className="py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-bold text-teal-2">نحوه‌ی کار</span>
+          <span className="kicker text-teal-2">نحوه‌ی کار</span>
           <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
             از داده‌ی خام تا تصمیم هوشمند، در چهار گام
           </h2>

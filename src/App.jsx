@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Problem from './components/Problem'
 import Features from './components/Features'
 import DashboardShowcase from './components/DashboardShowcase'
+import AIInsights from './components/AIInsights'
 import Security from './components/Security'
 import HowItWorks from './components/HowItWorks'
 import CTA from './components/CTA'
@@ -17,6 +18,7 @@ function App() {
         <Problem />
         <Features />
         <DashboardShowcase />
+        <AIInsights />
         <Security />
         <HowItWorks />
         <CTA />
