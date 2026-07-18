@@ -48,7 +48,7 @@ export default function Navbar() {
             href="#contact"
             className="rounded-full bg-teal px-5 py-2.5 text-sm font-bold text-navy transition hover:bg-teal-2"
           >
-            درخواست دمو
+            درخواست مشاوره رایگان
           </a>
         </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-1 rounded-full bg-teal px-5 py-2.5 text-center text-sm font-bold text-navy"
             >
-              درخواست دمو
+              درخواست مشاوره رایگان
             </a>
           </nav>
         </div>

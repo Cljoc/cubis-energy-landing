@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
 import dashboardMain from '../assets/screens/dashboard-main.png'
 import dashboardPats from '../assets/screens/dashboard-pats-1.png'
 import aiInsights from '../assets/screens/ai-insights-1.png'
@@ -18,15 +19,17 @@ export default function DashboardShowcase() {
   return (
     <section id="dashboard" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="kicker justify-center text-teal-2">داشبورد رهنمون</span>
-          <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl text-balance">
-            محصولی که واقعاً روی خط تولید کار می‌کند
-          </h2>
-          <p className="mt-4 text-mist">
-            تصاویر واقعی از پلتفرم مدیریت هوشمند انرژی — همان چیزی که تیم تولید و انرژی هر روز با آن کار می‌کند.
-          </p>
-        </div>
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="kicker justify-center text-teal-2">داشبورد رهنمون</span>
+            <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl text-balance">
+              محصولی که واقعاً روی خط تولید کار می‌کند
+            </h2>
+            <p className="mt-4 text-mist">
+              تصاویر واقعی از پلتفرم مدیریت هوشمند انرژی — همان چیزی که تیم تولید و انرژی هر روز با آن کار می‌کند.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
           {tabs.map((t) => (
@@ -47,7 +50,7 @@ export default function DashboardShowcase() {
         <div className="relative mt-10">
           <div className="pointer-events-none absolute inset-x-10 -top-6 -z-10 h-40 rounded-full bg-teal/10 blur-[100px]" />
 
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-navy-2 shadow-2xl shadow-black/50">
+          <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-navy-2 shadow-2xl shadow-black/50 transition duration-500 hover:shadow-teal/10 hover:-translate-y-1">
             <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
               <span className="h-2.5 w-2.5 rounded-full bg-amber/70" />

@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ImpactStats from './components/ImpactStats'
 import Problem from './components/Problem'
 import Features from './components/Features'
 import DashboardShowcase from './components/DashboardShowcase'
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <ImpactStats />
         <Problem />
         <Features />
         <DashboardShowcase />

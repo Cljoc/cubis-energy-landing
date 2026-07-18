@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
 
 export default function CTA() {
   const [sent, setSent] = useState(false)
@@ -14,14 +15,14 @@ export default function CTA() {
   return (
     <section id="contact" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[28rem] w-[42rem] -translate-x-1/2 rounded-full bg-teal/10 blur-[130px]" />
+        <div className="drift absolute left-1/2 top-0 h-[28rem] w-[42rem] -translate-x-1/2 rounded-full bg-teal/10 blur-[130px]" />
       </div>
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
-        <div>
+        <Reveal>
           <span className="kicker text-teal-2">شروع کنید</span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-            برای دموی رایگان پلتفرم مدیریت هوشمند انرژی با ما در تماس باشید
+            برای دریافت جلسه مشاوره رایگان پلتفرم مدیریت هوشمند انرژی با ما در تماس باشید
           </h2>
           <p className="mt-5 max-w-md leading-8 text-mist">
             کارشناسان رهنمون ظرف کمتر از یک روز کاری با شما تماس می‌گیرند و مسیر استقرار
@@ -46,9 +47,9 @@ export default function CTA() {
               <span className="text-white">تهران، خیابان مطهری، علی‌اکبری، پلاک ۵۵</span>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="glass rounded-3xl p-7 sm:p-8">
+        <Reveal delay={150} className="glass rounded-3xl p-7 sm:p-8">
           {sent ? (
             <div className="flex h-full min-h-[22rem] flex-col items-center justify-center text-center">
               <div className="grid h-14 w-14 place-items-center rounded-full bg-teal/15 text-teal-2">✓</div>
@@ -77,11 +78,11 @@ export default function CTA() {
                 type="submit"
                 className="w-full rounded-xl bg-teal py-3.5 font-bold text-navy transition hover:bg-teal-2"
               >
-                ارسال درخواست دمو
+                ارسال درخواست جلسه مشاوره رایگان
               </button>
             </form>
           )}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const items = [
   {
     title: 'داده‌های پراکنده',
@@ -17,20 +19,24 @@ export default function Problem() {
   return (
     <section className="relative border-y border-white/5 bg-navy-2/40 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="max-w-2xl">
-          <span className="kicker text-teal-2">چالش صنایع انرژی‌بر</span>
-          <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
-            مدیریت انرژی بدون دید لحظه‌ای، یعنی هدررفت پنهان سرمایه
-          </h2>
-        </div>
+        <Reveal>
+          <div className="max-w-2xl">
+            <span className="kicker text-teal-2">چالش صنایع انرژی‌بر</span>
+            <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
+              مدیریت انرژی بدون دید لحظه‌ای، یعنی هدررفت پنهان سرمایه
+            </h2>
+          </div>
+        </Reveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {items.map((it, i) => (
-            <div key={i} className="rounded-2xl border border-white/8 bg-white/[0.03] p-7">
-              <div className="num-en mb-5 text-4xl font-black text-white/15">{['۰۱', '۰۲', '۰۳'][i]}</div>
-              <h3 className="text-lg font-bold text-white">{it.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-mist">{it.desc}</p>
-            </div>
+            <Reveal key={i} delay={i * 100}>
+              <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-7">
+                <div className="num-en mb-5 text-4xl font-black text-white/15">{['۰۱', '۰۲', '۰۳'][i]}</div>
+                <h3 className="text-lg font-bold text-white">{it.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-mist">{it.desc}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

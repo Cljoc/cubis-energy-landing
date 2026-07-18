@@ -1,4 +1,5 @@
 import { Icon } from './icons'
+import Reveal from './Reveal'
 
 const points = [
   'نصب و اجرای کامل روی سرورهای داخلی سازمان شما، بدون وابستگی به کلود عمومی',
@@ -13,7 +14,7 @@ export default function Security() {
       <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-10 h-full w-full max-w-4xl -translate-x-1/2 bg-teal/5 blur-[100px]" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
-        <div>
+        <Reveal>
           <div className="grid h-14 w-14 place-items-center rounded-2xl bg-teal/10 text-teal-2">
             <Icon name="shield" className="h-7 w-7" />
           </div>
@@ -36,22 +37,24 @@ export default function Security() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="glass relative rounded-3xl p-8">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-bold text-white">معماری استقرار</span>
-            <span className="rounded-full bg-teal/15 px-3 py-1 text-[11px] font-semibold text-teal-2">On-Premise</span>
-          </div>
+        <Reveal delay={150}>
+          <div className="glass relative rounded-3xl p-8">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-bold text-white">معماری استقرار</span>
+              <span className="rounded-full bg-teal/15 px-3 py-1 text-[11px] font-semibold text-teal-2">On-Premise</span>
+            </div>
 
-          <div className="mt-8 space-y-4">
-            <ArchRow icon="plug" title="سنسورها و کنتورهای هوشمند" desc="جمع‌آوری خودکار داده از تجهیزات میدانی" />
-            <ArchLine />
-            <ArchRow icon="server" title="سرور داخلی سازمان" desc="پردازش، ذخیره‌سازی و تحلیل کاملاً درون‌سازمانی" />
-            <ArchLine />
-            <ArchRow icon="chart" title="داشبورد رهنمون" desc="نمایش، هشدار و گزارش‌گیری برای تیم شما" />
+            <div className="mt-8 space-y-1">
+              <ArchRow icon="plug" title="سنسورها و کنتورهای هوشمند" desc="جمع‌آوری خودکار داده از تجهیزات میدانی" />
+              <ArchLine />
+              <ArchRow icon="server" title="سرور داخلی سازمان" desc="پردازش، ذخیره‌سازی و تحلیل کاملاً درون‌سازمانی" />
+              <ArchLine />
+              <ArchRow icon="chart" title="داشبورد رهنمون" desc="نمایش، هشدار و گزارش‌گیری برای تیم شما" />
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -73,8 +76,9 @@ function ArchRow({ icon, title, desc }) {
 
 function ArchLine() {
   return (
-    <div className="flex justify-center">
-      <div className="h-5 w-px bg-gradient-to-b from-teal-2/60 to-transparent" />
+    <div className="relative flex h-6 justify-center overflow-hidden">
+      <div className="h-full w-px bg-white/10" />
+      <div className="absolute top-0 h-3 w-px bg-gradient-to-b from-transparent via-teal-2 to-transparent" style={{ animation: 'flow-down 1.8s linear infinite' }} />
     </div>
   )
 }

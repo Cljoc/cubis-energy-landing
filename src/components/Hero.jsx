@@ -1,12 +1,13 @@
 import { Icon } from './icons'
+import CountUp from './CountUp'
 import dashboardMain from '../assets/screens/dashboard-main.png'
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-36 pb-24 lg:pt-48 lg:pb-32">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 right-[-10%] h-[36rem] w-[36rem] rounded-full bg-teal/20 blur-[120px]" />
-        <div className="absolute bottom-[-12rem] left-[-10%] h-[30rem] w-[30rem] rounded-full bg-amber/10 blur-[120px]" />
+        <div className="drift absolute -top-40 right-[-10%] h-[36rem] w-[36rem] rounded-full bg-teal/20 blur-[120px]" />
+        <div className="drift absolute bottom-[-12rem] left-[-10%] h-[30rem] w-[30rem] rounded-full bg-amber/10 blur-[120px]" style={{ animationDelay: '3s' }} />
         <div className="grain absolute inset-0 opacity-60" />
       </div>
 
@@ -38,7 +39,7 @@ export default function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 font-bold text-navy shadow-[0_0_0_0_rgba(234,168,13,0)] transition hover:bg-teal-2 hover:shadow-[0_0_40px_-8px_rgba(255,207,86,0.6)]"
             >
-              درخواست دمو رایگان
+              درخواست مشاوره رایگان
               <Icon name="arrow" className="h-4 w-4 -rotate-180 transition group-hover:-translate-x-1" />
             </a>
             <a
@@ -50,9 +51,13 @@ export default function Hero() {
           </div>
 
           <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-8">
-            <Stat value="۱۲.۵٪" label="کاهش مصرف انرژی" />
-            <Stat value="۹۸.۷٪" label="دقت پایش داده" />
-            <Stat value="۲۴/۷" label="مانیتورینگ زنده" />
+            <Stat label="کاهش مصرف انرژی">
+              <CountUp to={12.5} decimals={1} suffix="٪" />
+            </Stat>
+            <Stat label="دقت پایش داده">
+              <CountUp to={98.7} decimals={1} suffix="٪" />
+            </Stat>
+            <Stat label="مانیتورینگ زنده">۲۴/۷</Stat>
           </div>
         </div>
 
@@ -64,10 +69,10 @@ export default function Hero() {
   )
 }
 
-function Stat({ value, label }) {
+function Stat({ children, label }) {
   return (
     <div>
-      <div className="num-en text-2xl font-black text-white">{value}</div>
+      <div className="text-2xl font-black text-white">{children}</div>
       <div className="mt-1 text-xs text-mist">{label}</div>
     </div>
   )
