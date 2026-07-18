@@ -27,6 +27,18 @@ export const Icon = ({ name, className = 'w-6 h-6' }) => {
       return <svg {...common}><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h13.5M12.5 6l6.5 6-6.5 6"/></svg>
     case 'check':
       return <svg {...common}><path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7"/></svg>
+    case 'cloud':
+      return <svg {...common}><path strokeLinecap="round" strokeLinejoin="round" d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 9.5 4 4 0 0 0 7 18Z"/></svg>
+    case 'brain':
+      return <svg {...common}><path strokeLinecap="round" strokeLinejoin="round" d="M9 4.5a2.5 2.5 0 0 0-2.5 2.5v.3A2.7 2.7 0 0 0 5 9.8v1.4a2.7 2.7 0 0 0-1 2.1v.5A2.7 2.7 0 0 0 6.7 17H9V4.5Z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 4.5a2.5 2.5 0 0 1 2.5 2.5v.3a2.7 2.7 0 0 1 1.5 2.5v1.4a2.7 2.7 0 0 1 1 2.1v.5A2.7 2.7 0 0 1 17.3 17H15V4.5Z"/><path strokeLinecap="round" d="M9 17v2.5M15 17v2.5"/></svg>
+    case 'target':
+      return <svg {...common}><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="3.8"/><path strokeLinecap="round" d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3"/></svg>
+    case 'radio':
+      return <svg {...common}><circle cx="12" cy="12" r="2"/><path strokeLinecap="round" d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+    case 'building':
+      return <svg {...common}><rect x="5" y="3.5" width="9" height="17" rx="1"/><path strokeLinecap="round" d="M14 9.5h5v11h-5M8 7h1M11 7h1M8 10.5h1M11 10.5h1M8 14h1M11 14h1"/></svg>
+    case 'flask':
+      return <svg {...common}><path strokeLinecap="round" strokeLinejoin="round" d="M10 3.5h4M10 3.5v6L5.5 18a1.6 1.6 0 0 0 1.4 2.5h10.2a1.6 1.6 0 0 0 1.4-2.5L14 9.5v-6"/><path strokeLinecap="round" d="M8 15.5h8"/></svg>
     default:
       return null
   }
