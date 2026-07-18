@@ -2,22 +2,24 @@ import { useMemo, useState } from 'react'
 import Reveal from './Reveal'
 
 const faDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
-const toFa = (n) => Math.round(n).toLocaleString('en-US').replace(/[0-9]/g, (d) => faDigits[d])
+const toFa = (n, decimals = 0) =>
+  n
+    .toFixed(decimals)
+    .toLocaleString('en-US')
+    .replace(/[0-9]/g, (d) => faDigits[d])
 
 export default function ROICalculator() {
   const [monthlyBill, setMonthlyBill] = useState(500)
-  const [equipmentCount, setEquipmentCount] = useState(50)
-  const [operatingHours, setOperatingHours] = useState(16)
+  const [investment, setInvestment] = useState(1000)
+  const [savingPercent, setSavingPercent] = useState(8)
 
   const result = useMemo(() => {
-    const savingPercent = 10 + Math.min(8, operatingHours / 3)
     const monthlySaving = (monthlyBill * savingPercent) / 100
     const annualSaving = monthlySaving * 12
-    const investment = 250 + equipmentCount * 1.4
-    const paybackMonths = Math.max(2, investment / monthlySaving)
-    const carbonReduction = Math.min(48, savingPercent * 2.1)
-    return { savingPercent, monthlySaving, annualSaving, paybackMonths, carbonReduction }
-  }, [monthlyBill, equipmentCount, operatingHours])
+    const paybackMonths = monthlySaving > 0 ? Math.max(1, investment / monthlySaving) : 0
+    const carbonReduction = Math.min(48, savingPercent * 2.7)
+    return { monthlySaving, annualSaving, paybackMonths, carbonReduction }
+  }, [monthlyBill, investment, savingPercent])
 
   return (
     <section className="py-24">
@@ -44,22 +46,22 @@ export default function ROICalculator() {
                 onChange={setMonthlyBill}
               />
               <Slider
-                label="تعداد تجهیزات صنعتی"
-                unit="دستگاه"
-                value={equipmentCount}
-                min={5}
-                max={400}
-                step={5}
-                onChange={setEquipmentCount}
+                label="میزان سرمایه‌گذاری"
+                unit="میلیون تومان"
+                value={investment}
+                min={100}
+                max={10000}
+                step={50}
+                onChange={setInvestment}
               />
               <Slider
-                label="ساعات کارکرد روزانه"
-                unit="ساعت"
-                value={operatingHours}
-                min={8}
-                max={24}
-                step={1}
-                onChange={setOperatingHours}
+                label="میزان صرفه‌جویی و بهینه‌سازی"
+                unit="٪"
+                value={savingPercent}
+                min={2}
+                max={15}
+                step={0.5}
+                onChange={setSavingPercent}
               />
             </div>
 
@@ -77,12 +79,13 @@ export default function ROICalculator() {
 }
 
 function Slider({ label, unit, value, min, max, step, onChange }) {
+  const decimals = step < 1 ? 1 : 0
   return (
     <div>
       <div className="flex items-baseline justify-between text-sm">
         <span className="font-bold text-white">{label}</span>
         <span className="num-en text-teal-2">
-          {toFa(value)} <span className="text-mist">{unit}</span>
+          {toFa(value, decimals)} <span className="text-mist">{unit}</span>
         </span>
       </div>
       <input
