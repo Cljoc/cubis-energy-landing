@@ -2,10 +2,14 @@ import { useEffect, useState } from 'react'
 import Logo from './Logo'
 
 const links = [
+  { href: '#problem', label: 'چالش‌ها' },
+  { href: '#digital-twin', label: 'دوقلوی دیجیتال' },
   { href: '#features', label: 'ویژگی‌ها' },
   { href: '#dashboard', label: 'داشبورد' },
+  { href: '#ai', label: 'هوش مصنوعی' },
+  { href: '#industries', label: 'صنایع' },
+  { href: '#roi', label: 'بازگشت سرمایه' },
   { href: '#security', label: 'امنیت داده' },
-  { href: '#how', label: 'نحوه‌ی کار' },
   { href: '#contact', label: 'تماس با ما' },
 ]
 
@@ -35,7 +39,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 xl:flex">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-mist transition hover:text-white">
               {l.label}
@@ -54,7 +58,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-white lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-white xl:hidden"
           aria-label="منو"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -64,7 +68,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy/95 px-6 py-4 lg:hidden">
+        <div className="border-t border-white/10 bg-navy/95 px-6 py-4 xl:hidden">
           <nav className="flex flex-col gap-4">
             {links.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm text-mist hover:text-white">

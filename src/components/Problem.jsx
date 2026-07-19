@@ -26,7 +26,7 @@ const items = [
 
 export default function Problem() {
   return (
-    <section className="relative overflow-hidden border-y border-white/5 bg-navy-2/40 py-24">
+    <section id="problem" className="relative overflow-hidden border-y border-white/5 bg-navy-2/40 py-24">
       <div className="pointer-events-none absolute inset-x-10 top-10 -z-10 h-64 rounded-full bg-red-500/10 blur-[110px]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">

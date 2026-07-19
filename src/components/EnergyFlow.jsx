@@ -16,7 +16,7 @@ const stages = [
 
 export default function EnergyFlow() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section id="energy-flow" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute inset-x-10 top-1/2 -z-10 h-64 -translate-y-1/2 rounded-full bg-teal/10 blur-[120px]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">

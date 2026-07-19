@@ -6,7 +6,7 @@ const after = ['دوقلوی دیجیتال زنده از کل کارخانه', 
 
 export default function BeforeAfter() {
   return (
-    <section className="py-24">
+    <section id="before-after" className="py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

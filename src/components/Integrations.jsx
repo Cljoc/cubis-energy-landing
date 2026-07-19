@@ -11,7 +11,7 @@ export default function Integrations() {
   const radius = 168
 
   return (
-    <section className="relative overflow-hidden py-24">
+    <section id="integrations" className="relative overflow-hidden py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

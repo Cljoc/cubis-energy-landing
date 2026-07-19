@@ -12,7 +12,7 @@ const metrics = [
 
 export default function SuccessMetrics() {
   return (
-    <section className="border-y border-white/5 bg-navy-2/40 py-24">
+    <section id="metrics" className="border-y border-white/5 bg-navy-2/40 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

@@ -12,7 +12,7 @@ const forecast = [30, 42, 38, 55, 48, 62, 58, 70, 64, 78, 74, 88]
 
 export default function LiveAI() {
   return (
-    <section className="relative overflow-hidden border-y border-white/5 bg-navy-2/40 py-24">
+    <section id="ai" className="relative overflow-hidden border-y border-white/5 bg-navy-2/40 py-24">
       <NeuralCanvas className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy-2/40 via-transparent to-navy-2/60" />
 

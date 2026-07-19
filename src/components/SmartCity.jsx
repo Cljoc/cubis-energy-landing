@@ -14,7 +14,7 @@ const facilities = [
 
 export default function SmartCity() {
   return (
-    <section className="relative py-24">
+    <section id="smart-city" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
