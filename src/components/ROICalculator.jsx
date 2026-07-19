@@ -37,7 +37,7 @@ export default function ROICalculator() {
           <div className="mt-14 grid gap-6 rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:grid-cols-2">
             <div className="space-y-7">
               <Slider
-                label="قبض ماهانه‌ی برق"
+                label="قبض ماهانه‌ی انرژی"
                 unit="میلیارد تومان"
                 value={monthlyBill}
                 min={0.5}
