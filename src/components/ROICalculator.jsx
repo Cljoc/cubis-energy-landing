@@ -9,8 +9,8 @@ const toFa = (n, decimals = 0) =>
     .replace(/[0-9]/g, (d) => faDigits[d])
 
 export default function ROICalculator() {
-  const [monthlyBill, setMonthlyBill] = useState(500)
-  const [investment, setInvestment] = useState(1000)
+  const [monthlyBill, setMonthlyBill] = useState(2)
+  const [investment, setInvestment] = useState(10)
   const [savingPercent, setSavingPercent] = useState(8)
 
   const result = useMemo(() => {
@@ -38,20 +38,20 @@ export default function ROICalculator() {
             <div className="space-y-7">
               <Slider
                 label="قبض ماهانه‌ی برق"
-                unit="میلیون تومان"
+                unit="میلیارد تومان"
                 value={monthlyBill}
-                min={50}
-                max={3000}
-                step={10}
+                min={0.5}
+                max={20}
+                step={0.5}
                 onChange={setMonthlyBill}
               />
               <Slider
                 label="میزان سرمایه‌گذاری"
-                unit="میلیون تومان"
+                unit="میلیارد تومان"
                 value={investment}
-                min={100}
-                max={10000}
-                step={50}
+                min={1}
+                max={100}
+                step={1}
                 onChange={setInvestment}
               />
               <Slider
@@ -66,8 +66,8 @@ export default function ROICalculator() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <Result label="صرفه‌جویی ماهانه" value={`${toFa(result.monthlySaving)}`} unit="میلیون تومان" />
-              <Result label="صرفه‌جویی سالانه" value={`${toFa(result.annualSaving)}`} unit="میلیون تومان" />
+              <Result label="صرفه‌جویی ماهانه" value={`${toFa(result.monthlySaving, 2)}`} unit="میلیارد تومان" />
+              <Result label="صرفه‌جویی سالانه" value={`${toFa(result.annualSaving, 1)}`} unit="میلیارد تومان" />
               <Result label="کاهش انتشار کربن" value={`${toFa(result.carbonReduction)}٪`} unit="تخمینی" />
               <Result label="بازگشت سرمایه" value={`${toFa(result.paybackMonths)}`} unit="ماه" highlight />
             </div>
