@@ -41,7 +41,7 @@ export default function ROICalculator() {
                 unit="میلیارد تومان"
                 value={monthlyBill}
                 min={0.5}
-                max={20}
+                max={1000}
                 step={0.5}
                 onChange={setMonthlyBill}
               />
